@@ -42,12 +42,12 @@ public class Moneda {
     
 	public double convertirA(Moneda otraMoneda, double cantidad) {
 		double resultado = otraMoneda.ValorEnDolares / this.ValorEnDolares*cantidad;	
-		return resultado;
+		return (double)Math.round(resultado*100)/100;
 	}
     @Override
     public String toString() {
 
         return this.nombreAbreviado + " - " + this.nombre;
-        
+
     }
 }

@@ -42,11 +42,11 @@ public class MonedaController implements Initializable {
     void btnConvertir(ActionEvent event) {
 
         try {
-        double numAConvertir =  Math.round(Double.parseDouble(this.fieldDe.getText())*100)/100  ;
+        double numAConvertir =  Double.parseDouble(this.fieldDe.getText())  ;
         
         this.fieldA.setText(String.valueOf(
             valorDe.convertirA(
-                valorA, numAConvertir)));
+                valorA, numAConvertir )));
 
         } catch (RuntimeException e) {
 
