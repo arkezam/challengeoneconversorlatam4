@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "ChallengeAluraConversor_bf70ee51",
+            "vmArgs": "--module-path \"C:/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
