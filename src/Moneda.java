@@ -44,4 +44,10 @@ public class Moneda {
 		double resultado = otraMoneda.ValorEnDolares / this.ValorEnDolares*cantidad;	
 		return resultado;
 	}
+    @Override
+    public String toString() {
+
+        return this.nombreAbreviado + " - " + this.nombre;
+        
+    }
 }

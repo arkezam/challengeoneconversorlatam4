@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -20,6 +21,11 @@ public class HomeController {
             root = loader.load();
             Stage stage = new Stage();
             Scene scene = new Scene(root);
+
+            Image icono = new Image("file:assets/vector.png");
+            stage.getIcons().add(icono);
+            stage.setTitle("Challenge Alura - Conversor de Moneda");
+
             stage.setScene(scene);
 
             stage.show();
