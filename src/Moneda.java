@@ -41,7 +41,8 @@ public class Moneda {
 	}
     
 	public double convertirA(Moneda otraMoneda, double cantidad) {
-		double resultado = otraMoneda.ValorEnDolares / this.ValorEnDolares*cantidad;	
+		double factor = otraMoneda.ValorEnDolares / this.ValorEnDolares; 
+		double resultado =  factor*cantidad;	
 		return (double)Math.round(resultado*100)/100;
 	}
     @Override

@@ -38,7 +38,24 @@ public class HomeController {
 
     @FXML
     void BtnDistancias(ActionEvent event) {
+        Parent root;
+        
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Distancia.fxml"));
+            root = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
 
+            Image icono = new Image("file:assets/vector.png");
+            stage.getIcons().add(icono);
+            stage.setTitle("Challenge Alura - Conversor de Moneda");
+
+            stage.setScene(scene);
+
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

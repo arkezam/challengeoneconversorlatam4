@@ -7,10 +7,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="565.0" style="-fx-background-color: #0E204C;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MonedaController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="565.0" style="-fx-background-color: #0E204C;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DistanciaController">
    <children>
-      <Label layoutX="168.0" layoutY="27.0" text="CONVERTIR MONEDA" textFill="WHITE">
+      <Button fx:id="btnAtrasID" layoutX="23.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnAtras" prefHeight="40.0" prefWidth="67.0" style="-fx-background-color: #0D3D63;" text="Atras" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="153.0" layoutY="26.0" text="CONVERTIR DISTANCIAS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
@@ -20,7 +24,7 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="fieldA" disable="true" editable="false" layoutX="318.0" layoutY="217.0" opacity="0.83">
+      <TextField fx:id="fieldA" editable="false" layoutX="318.0" layoutY="217.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -30,7 +34,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="193.0" layoutY="73.0" text="Selecciona una Moneda" textFill="WHITE">
+      <Label layoutX="193.0" layoutY="73.0" text="Selecciona una medida" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
@@ -40,15 +44,10 @@
       <ComboBox fx:id="choiceA" layoutX="318.0" layoutY="126.0" prefHeight="25.0" prefWidth="173.0" promptText="Convertir a:" />
       <Label fx:id="textDe" layoutX="74.0" layoutY="159.0" text="-" textFill="WHITE" />
       <Label fx:id="textA" layoutX="318.0" layoutY="159.0" text="-" textFill="WHITE" />
-      <Label layoutX="268.0" layoutY="125.0" text="--&gt;" textFill="WHITE">
+      <Label layoutX="265.0" layoutY="125.0" text="--&gt;" textFill="WHITE">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <Button fx:id="btnAtras" layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnAtras" prefHeight="40.0" prefWidth="67.0" style="-fx-background-color: #0D3D63;" text="Atras" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
    </children>
 </Pane>
