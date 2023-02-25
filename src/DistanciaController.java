@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 public class DistanciaController {
 
+    // Instanciando objetos Distancia
   private  Distancia metro = new Distancia("Metro", 1, "m.");
   private  Distancia kilometro = new Distancia("Kilometro", 1000, "Km.");
   private  Distancia codo = new Distancia("yarda", 0.9144, "yd");
@@ -22,15 +23,11 @@ public class DistanciaController {
   private  Distancia pie = new Distancia("Pie", 0.3048, "ft");
 
 
-
     @FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
-
-    @FXML
-    private Button btnAtrasID;
 
     @FXML
     private ComboBox<Distancia> choiceDe = new ComboBox<>();
@@ -43,12 +40,6 @@ public class DistanciaController {
 
     @FXML
     private TextField fieldDe;
-
-    @FXML
-    private Label textA;
-
-    @FXML
-    private Label textDe;
 
     private ObservableList<Distancia> opciones = FXCollections.observableArrayList(  metro,  kilometro, codo, milla, pie );
 
@@ -87,12 +78,6 @@ public class DistanciaController {
         this.valorA = valor;
     }
 
-    @FXML
-    void btnAtras(ActionEvent event) {
-        Node source = (Node) event.getSource();
-        Stage stage = (Stage) source.getScene().getWindow();
-        stage.close();
-    }
     @FXML
     void btnReverse(ActionEvent event) {
         String temp="";

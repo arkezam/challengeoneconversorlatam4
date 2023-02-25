@@ -1,27 +1,20 @@
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 
-public class MonedaController implements Initializable {
+public class MonedaController implements Initializable, MonedaInterface {
 
-    // Instanciando Objetos
-    private Moneda sol = new Moneda("Sol Peruano", "PERU", "PEN", 3.81);
-    private Moneda usd = new Moneda("Dolar Estadounidense", "USA", "USD", 1);
-    private Moneda eur = new Moneda("Euro", "Unión Europea", "EUR", 0.94);    
-    private Moneda libras = new Moneda("Libras Esterlinas", "Reino Unido", "GBP", 0.84);
-    private Moneda yen = new Moneda("Yen Japones", "Japon", "JPY", 136.48);
-    private Moneda won = new Moneda("Won sul-coreano", "Corea", "KRW", 1314.82);
-    private Moneda ars = new Moneda("Peso Argentino", "Argentina", "ARS", 195.02);
-    private Moneda brl = new Moneda("Real brasileño", "Brasil", "BRL", 5.21);
 
     // Definiendo variables
     @FXML
@@ -45,9 +38,6 @@ public class MonedaController implements Initializable {
     @FXML
     private Label textResumen;
 
-    // creando lista de Monedas
-    private ObservableList<Moneda> opciones = FXCollections.observableArrayList( sol, usd, eur, libras, yen, won, ars, brl);
-
     // instanciando objetos de tipo Moneda
     private Moneda valorDe, valorA;
 
@@ -55,7 +45,13 @@ public class MonedaController implements Initializable {
     @FXML
     void btnConvertir(ActionEvent event) {
         // boton que convierte 
+
+
         try {
+            
+        if(Double.parseDouble(this.fieldDe.getText()) <= 0){
+            throw new NumPositivoException("El monto debe ser Mayor a cero");
+         }
         double numAConvertir =  Double.parseDouble(this.fieldDe.getText())  ;
         
         this.fieldA.setText(String.valueOf(
@@ -64,18 +60,17 @@ public class MonedaController implements Initializable {
 
         this.textResumen.setText(this.fieldDe.getText() +" "+ valorDe.getNombre() +
            " es Equivalente A " + this.fieldA.getText() +" "+ valorA.getNombre());
-        } catch (RuntimeException e) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setHeaderText(null);
-            alert.setTitle("Error");
-            alert.setContentText("Escriba un monto y Seleccione una moneda válida para ambos casos");
-            alert.showAndWait();
+
+        } catch (NumPositivoException e) {
+           System.out.println(e);
+        } catch(RuntimeException e){
+            throw new ExceptionMoneda("Escriba un monto y Seleccione una moneda válida para ambos casos");
         }
+        
     }
 
     @FXML
     void btnReverse(ActionEvent event) {
-
 
         // intercambiar valores
         Moneda mTemp = choiceA.getValue();
@@ -104,25 +99,40 @@ public class MonedaController implements Initializable {
         this.textDe.setText("nombre de pais");
     }
 
+    @FXML
+    void btnAddMoneda(ActionEvent event) {
+
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CrearMoneda.fxml"));
+            Parent root  = loader.load();
+            Scene scene = new Scene(root);
+            
+            stage.setScene(scene);
+            stage.setTitle("Añadir Moneda");
+            
+            stage.show();
+            
+        } catch (IOException e) {
+            
+            e.printStackTrace();
+        }
+    }
+
 
     public void getValorDe(ActionEvent event){
         //obtener valor del campo seleccionado "De" de comboBox
-
         Moneda valor = choiceDe.getValue();
         this.valorDe = valor;
-        
         String pais = choiceDe.getValue().getPais();
         this.textDe.setText("Moneda de: " + pais);
-
     }
-
 
     public void getValorA(ActionEvent event){
         
         //obtener valor del campo seleccionado "A" de ComboBox
         Moneda valor = choiceA.getValue();
         this.valorA = valor;
-        
         String pais = choiceA.getValue().getPais();
         this.textA.setText("Moneda de: " + pais);
     }

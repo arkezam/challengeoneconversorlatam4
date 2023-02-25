@@ -15,15 +15,11 @@ public class Distancia {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+
     public double getDistanciaEnMetros() {
         return distanciaEnMetros;
     }
-    public void setDistanciaEnMetros(double distanciaEnMetros) {
-        this.distanciaEnMetros = distanciaEnMetros;
-    }
+
     public String getAbreviatura() {
         return abreviatura;
     }
