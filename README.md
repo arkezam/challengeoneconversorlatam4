@@ -3,13 +3,13 @@
 ## Requerimientos del Programa
 
 El convertidor de moneda debe:
-``
+
 - Convertir de la moneda de tu país a Dólar
 - Convertir de la moneda de tu país  a Euros
 - Convertir de la moneda de tu país  a Libras Esterlinas
 - Convertir de la moneda de tu país  a Yen Japonés
 - Convertir de la moneda de tu país  a Won sul-coreano
-``
+
 También debe ser posible convertir inversamente
 
 
@@ -33,7 +33,7 @@ Para el Desarrollo de este programa se utilizaron los conceptos de Programación
 - Como extra se añadio la Funcionalidad de convertir medidas de distancias.
 
 
-<p align="center" dir="auto" ><img src="https://i.pinimg.com/originals/4e/75/3d/4e753d4ed8d1ac5e510051d534b7e29f.gif" width="80%"></img></p>
+![nombre alternativo]("https://i.pinimg.com/originals/4e/75/3d/4e753d4ed8d1ac5e510051d534b7e29f.gif") 
 
 ## Tecnologías utilizadas
 - Java
