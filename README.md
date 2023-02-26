@@ -33,6 +33,7 @@ Para el Desarrollo de este programa se utilizaron los conceptos de Programación
 - Como extra se añadio la Funcionalidad de convertir medidas de distancias.
 
 
+<p align="center" dir="auto" ><img src="https://i.pinimg.com/originals/4e/75/3d/4e753d4ed8d1ac5e510051d534b7e29f.gif" width="80%"></img></p>
 
 ## Tecnologías utilizadas
 - Java

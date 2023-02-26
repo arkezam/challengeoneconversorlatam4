@@ -49,9 +49,10 @@ public class MonedaController implements Initializable, MonedaInterface {
 
         try {
             
-        if(Double.parseDouble(this.fieldDe.getText()) <= 0){
+        if(Double.parseDouble(this.fieldDe.getText()) < 0){
             throw new NumPositivoException("El monto debe ser Mayor a cero");
          }
+         
         double numAConvertir =  Double.parseDouble(this.fieldDe.getText())  ;
         
         this.fieldA.setText(String.valueOf(
