@@ -1,5 +1,8 @@
 # Challenge Alura: Conversor de Monedas
 
+<p align="center" dir="auto" ><img src="https://github.com/arkezam/challengeoneconversorlatam4/blob/master/assets/alurachallenge2.gif" alt="gif" width="70%"></img></p>
+
+
 ## Requerimientos del Programa
 
 El convertidor de moneda debe:
@@ -32,8 +35,6 @@ Para el Desarrollo de este programa se utilizaron los conceptos de Programación
 - Incluye la opción de agregar nuevas monedas y tasas de cambio.
 - Como extra se añadio la Funcionalidad de convertir medidas de distancias.
 
-
-<p align="center" dir="auto" ><img src="https://github.com/arkezam/challengeoneconversorlatam4/blob/master/assets/alurachallenge2.gif" alt="gif" width="80%"></img></p>
 
 ## Tecnologías utilizadas
 - Java
