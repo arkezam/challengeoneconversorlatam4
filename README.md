@@ -33,7 +33,7 @@ Para el Desarrollo de este programa se utilizaron los conceptos de Programación
 - Como extra se añadio la Funcionalidad de convertir medidas de distancias.
 
 
-<p align="center" dir="auto" ><img src="https://github.com/arkezam/challengeoneconversorlatam4.git" width="80%"></img></p>
+<p align="center" dir="auto" ><img src="https://github.com/arkezam/challengeoneconversorlatam4/blob/master/assets/alurachallenge2.gif" alt="gif" width="80%"></img></p>
 
 ## Tecnologías utilizadas
 - Java
