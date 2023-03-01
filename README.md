@@ -3,6 +3,9 @@
 <p align="center" dir="auto" ><img src="https://github.com/arkezam/challengeoneconversorlatam4/blob/master/assets/alurachallenge2.gif" alt="gif" width="70%"></img></p>
 
 
+<p align="center" dir="auto" ><img src="https://i.pinimg.com/originals/f0/91/05/f091051298f4781c33bcd908fc40fd58.png" alt="gif" width="70%"></img></p>
+
+
 ## Requerimientos del Programa
 
 El convertidor de moneda debe:
